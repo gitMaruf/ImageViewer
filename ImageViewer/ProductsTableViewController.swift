@@ -21,13 +21,11 @@ class ProductsTableViewController: UITableViewController {
     }
     
     
-    // MARK: - View Transfer
+    
   
-}
+//}
 
-
-// MARK: - UITableViewDataSource
-extension ProductsTableViewController {
+//extension ProductsTableViewController {
     override func tableView(_ tableView: UITableView,
                             numberOfRowsInSection section: Int) -> Int
     {
@@ -48,4 +46,19 @@ extension ProductsTableViewController {
         
         return cell;
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showProduct"{
+            if let cell = sender as? UITableViewCell,
+                let indexPath = tableView.indexPath(for: cell),
+                let productVC = segue.destination as? ProductViewController{
+                productVC.product = products?[indexPath.row]
+            }
+        }
+    }
+    
+
+    
+    
+    
 }
