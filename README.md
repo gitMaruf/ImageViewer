@@ -1,4 +1,4 @@
-![iOS Apps | Maruf](Documentation/array_TV6.png)
+![OUTPUR | Maruf](Documentation/cover.gif)
 
 # Image Viewer using tableView Controller
 
