@@ -108,7 +108,6 @@ productVC.product = products?[indexPath.row]
 }
 ```
 Go to ProductViewController.swif add those following lines of code
-
 ```swift
 mport UIKit
 
